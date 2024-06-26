@@ -1,0 +1,217 @@
+@import '@/assets/styles/variables';
+@import '@/assets/styles/animations';
+
+.button {
+	background-color: $primary;
+	color: $white;
+	border-radius: 0.65rem /* 10.4px */;
+	transition: background-color 0.3s ease-in-out;
+	padding-top: 0.5rem /* 8px */;
+	padding-bottom: 0.5rem /* 8px */;
+	padding-left: 2.5rem /* 40px */;
+	padding-right: 2.5rem /* 40px */;
+
+	&:hover {
+		background-color: #ff0009;
+	}
+}
+
+.animate_fade {
+	animation: fade 0.5s ease-in-out;
+}
+
+.common {
+	position: relative;
+	border: solid $gray-600 2px;
+	border-bottom-width: 1px;
+	transition-property: color, background-color, border-color,
+		text-decoration-color, fill, stroke;
+	transition-timing-function: ease-in-out;
+	transition-duration: 200ms;
+	&:focus-within {
+		border-color: $primary;
+	}
+
+	> label {
+		display: block;
+
+		> span {
+			font-size: 0.75rem /* 12px */;
+			line-height: 1rem /* 16px */;
+			text-transform: uppercase;
+			color: $gray-600;
+			display: block;
+		}
+	}
+}
+
+.field {
+	text-align: left;
+	margin-bottom: 2rem /* 32px */;
+
+	input {
+		outline: none;
+		border: none;
+		background-color: transparent;
+		color: $gray-500;
+		width: 100%;
+		margin: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		&:focus {
+			box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+		}
+	}
+}
+
+.uploadField {
+	position: relative;
+	.uploadFlex {
+		display: flex;
+
+		> .uploadImageContainer {
+			flex-shrink: 0;
+			position: relative;
+			width: 6rem /* 96px */;
+			height: 6rem /* 96px */;
+
+			img {
+				object-position: center;
+				object-fit: cover;
+				pointer-events: none;
+				border-radius: 0.375rem /* 6px */;
+			}
+
+			.loader {
+				width: 100%;
+				height: 100%;
+			}
+
+			> span {
+				animation: fade 0.5s ease-in-out;
+			}
+		}
+
+		> .uploadVideoContainer {
+			flex-shrink: 0;
+			position: absolute;
+			right: 0px;
+			width: 66%;
+
+			> div {
+				margin-top: 0px;
+			}
+
+			.loader {
+				width: 100%;
+				height: 100%;
+			}
+
+			> span {
+				animation: fade 0.5s ease-in-out;
+			}
+		}
+
+		> label {
+			display: block;
+			margin-right: 1.5rem /* 24px */;
+
+			.error {
+				position: relative;
+				bottom: -0.75rem /* -12px */;
+			}
+
+			> span {
+				font-size: 0.75rem /* 12px */;
+				line-height: 1rem /* 16px */;
+				text-transform: uppercase;
+				color: $gray-600;
+				display: block;
+				margin-bottom: 1rem /* 16px */;
+			}
+
+			.uploadFile[type='file' i] {
+				display: block;
+
+				font-size: 0.875rem /* 14px */;
+				line-height: 1.25rem /* 20px */;
+				font-weight: 600;
+				cursor: auto;
+
+				&::-webkit-file-upload-button {
+					margin-right: 0.5rem /* 8px */;
+					border-radius: 9999px;
+					border: none;
+					outline: none;
+					padding: 0.5rem 1rem 0.5rem 1rem;
+					cursor: pointer;
+					color: $white;
+					transition: background-color 0.3s ease-in-out;
+					background-color: rgba($primary, 0.7);
+					&:hover {
+						background-color: rgba($primary, 1);
+					}
+				}
+			}
+		}
+	}
+}
+
+.error {
+	position: absolute;
+	bottom: -1.5rem /* -24px */;
+	left: 0px;
+	font-size: 0.875rem /* 14px */;
+	line-height: 1.25rem /* 20px */;
+	width: 100%;
+	color: $primary;
+}
+
+.editorWrapper {
+	border: none;
+
+	.wrapper {
+		.toolbar {
+			margin-top: 1rem /* 16px */;
+			outline: none;
+			border: none;
+			border-top-left-radius: 0.5rem /* 8px */;
+			border-top-right-radius: 0.5rem /* 8px */;
+			margin-bottom: 0px;
+			background-color: opacify($color: $gray-600, $amount: 0.4);
+			padding: 0.75rem /* 12px */;
+
+			> div {
+				margin: 0px;
+
+				> div {
+					outline: none;
+					border: none;
+					box-shadow: none;
+					transition-property: color, background-color, border-color,
+						text-decoration-color, fill, stroke;
+					transition-timing-function: ease-in-out;
+					transition-duration: 200ms;
+					border: solid $gray-500 2px;
+					background-color: $gray-500;
+					margin-left: 0.375rem /* 6px */;
+					margin-right: 0.375rem /* 6px */;
+					&:hover {
+						background-color: $gray-300;
+					}
+				}
+			}
+		}
+
+		.editor {
+			height: 24rem /* 384px */;
+			border: solid $gray-700 2px;
+			border-bottom-right-radius: 0.5rem /* 8px */;
+			border-bottom-left-radius: 0.5rem /* 8px */;
+			padding-left: 1rem /* 16px */;
+			padding-right: 1rem /* 16px */;
+			color: $gray-500;
+			overflow: hidden;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+@import '@/assets/styles/variables';
+@import '@/assets/styles/animations';
+
+.menu {
+	margin-bottom: 56px;
+	animation: fade 0.5s ease-in-out;
+
+	.heading {
+		color: $gray-500;
+		text-transform: uppercase;
+		font-size: 0.875rem;
+		font-weight: 600;
+		padding-left: 2.75rem;
+	}
+
+	.ul {
+		list-style-type: none;
+		> li {
+			padding-left: 32px;
+			padding-right: 32px;
+			border-right-width: 4px;
+			border-right-color: transparent;
+			transition-property: color;
+			transition-duration: 0.3s;
+			> a {
+				display: flex;
+				align-items: center;
+				color: $gray-600;
+				margin-top: 24px;
+				cursor: pointer;
+
+				> span {
+					margin-left: 12px;
+					font-size: 1.125rem /* 18px */;
+					line-height: 1.75rem /* 28px */;
+				}
+
+				> span:hover {
+					color: #fff;
+				}
+
+				> svg {
+					font-size: 1.38rem;
+				}
+
+				> span,
+				> svg {
+					transition-property: color, background-color, border-color,
+						text-decoration-color, fill, stroke;
+					transition-timing-function: ease-in-out;
+					transition-duration: 200ms;
+				}
+
+				&.active {
+					border-right: 1px solid $primary;
+					> a > span {
+						color: #fff;
+					}
+
+					> a > svg {
+						fill: $primary;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.wrapper {
+	margin-top: 8rem /* 128px */;
+
+	> form {
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		border-radius: 0.8rem /* 12.8px */;
+		background-color: #101215;
+		color: #fff;
+		box-shadow:
+			0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
+		opacity: 0.8;
+		padding: 1.75rem /* 28px */;
+		text-align: center;
+
+		.buttons {
+			margin-top: 3rem /* 48px */;
+			box-shadow:
+				0 4px 6px -1px rgba(0, 0, 0, 0.1),
+				0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+			> button {
+				&:first-child {
+					border-top-right-radius: 0px;
+					border-bottom-right-radius: 0px;
+				}
+				&:last-child {
+					border-top-left-radius: 0px;
+					border-bottom-left-radius: 0px;
+					opacity: 0.8;
+					transition-property: opacity;
+					transition-timing-function: ease-in-out;
+					transition-duration: 200ms;
+					background-color: #8f050b;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.heading {
+	margin-bottom: 1.5rem !important/* 24px */;
+}

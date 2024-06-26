@@ -1,0 +1,63 @@
+.statistics {
+	display: flex;
+	align-items: stretch;
+	margin-top: 2.5rem /* 40px */;
+
+	.block {
+		border-radius: 0.8rem /* 12.8px */;
+		background-color: #101215;
+		color: #fff;
+		box-shadow:
+			0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
+		width: 40%;
+	}
+
+	.loader {
+		height: 12rem /* 192px */;
+	}
+
+	.countUsers {
+		margin-right: 7rem /* 112px */;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		.number {
+			font-size: 4.5rem /* 72px */;
+			line-height: 1;
+			margin-bottom: 0.25rem /* 4px */;
+			font-weight: 500;
+		}
+
+		.description {
+			opacity: 0.7;
+			font-size: 1.125rem /* 18px */;
+			line-height: 1.75rem /* 28px */;
+		}
+	}
+
+	.popular {
+		text-align: center;
+		padding: 1.25rem /* 20px */;
+
+		img {
+			border-radius: 0.8rem /* 12.8px */;
+			object-position: center;
+			object-fit: cover;
+			pointer-events: none;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		h2 {
+			margin-bottom: 0.25rem /* 4px */;
+		}
+
+		h3 {
+			opacity: 0.5;
+			font-weight: 500;
+			font-weight: 500;
+		}
+	}
+}

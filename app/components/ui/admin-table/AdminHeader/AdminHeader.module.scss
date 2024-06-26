@@ -1,0 +1,13 @@
+@import '@/assets/styles/variables';
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 2rem /* 32px */;
+
+	> button {
+		background-color: $primary;
+		opacity: 0.8;
+	}
+}

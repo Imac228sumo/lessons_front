@@ -1,0 +1,27 @@
+@import '@/assets/styles/variables';
+.list {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.25rem /* 4px */;
+
+	> .name {
+		color: $white;
+		margin-right: 0.5rem /* 8px */;
+		opacity: 0.6;
+	}
+
+	> .links {
+		color: $white;
+		opacity: 0.9;
+		> a {
+			text-underline-offset: 4px;
+			color: rgba(255, 255, 255, 0.9);
+			transition: text-decoration-color 0.3s ease-in-out;
+			text-decoration-line: underline;
+			text-decoration-color: rgba(255, 255, 255, 0.2);
+			&:hover {
+				text-decoration-color: rgba(255, 255, 255, 0.9);
+			}
+		}
+	}
+}

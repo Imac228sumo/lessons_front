@@ -1,0 +1,46 @@
+@import '@/assets/styles/variables';
+@import '@/assets/styles/variables';
+
+.wrapper {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.5rem /* 40px */;
+	margin-bottom: 2.5rem /* 40px */;
+	border-radius: 0.8rem /* 12.8px */;
+	background-color: #101215;
+	color: $white;
+	box-shadow:
+		0 10px 15px -3px rgb(0 0 0 / 0.1),
+		0 4px 6px -4px rgb(0 0 0 / 0.1);
+	padding: 1.75rem /* 28px */;
+	text-align: center;
+
+	> h3 {
+		font-size: 1.5rem /* 24px */;
+		line-height: 2rem /* 32px */;
+		font-weight: 600;
+	}
+
+	> p {
+		margin-top: 0.5rem /* 8px */;
+		margin-bottom: 0.75rem /* 12px */;
+		font-size: 1.125rem /* 18px */;
+		line-height: 1.75rem /* 28px */;
+		opacity: 0.6;
+	}
+
+	> div {
+		font-size: 2.25rem /* 36px */;
+		line-height: 2.5rem /* 40px */;
+		opacity: 0.9;
+	}
+
+	> .thanks {
+		color: $yellow-700;
+		font-size: 1.875rem /* 30px */;
+		line-height: 2.25rem /* 36px */;
+		font-weight: 600;
+		animation: scaleIn 0.35s ease-in-out;
+	}
+}

@@ -1,0 +1,39 @@
+@import '@/assets/styles/variables';
+$bar-width: 20%;
+
+.layout {
+	position: relative;
+	overflow-y: scroll;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	scrollbar-width: none;
+
+	> div:first-child,
+	> div:last-child {
+		position: fixed;
+		top: 0px;
+		bottom: 0px;
+
+		width: $bar-width;
+		max-width: 350px;
+	}
+
+	> div:first-child {
+		left: 0px;
+		border-right: 1px solid;
+		border-right-color: $gray-800;
+	}
+
+	> .center {
+		min-height: 100vh;
+		padding: 2.75rem;
+		margin: 0 $bar-width;
+	}
+
+	> div:last-child {
+		right: 0px;
+		border-left: 1px solid;
+		border-left-color: $gray-800;
+	}
+}
